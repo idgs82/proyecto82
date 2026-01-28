@@ -6,7 +6,7 @@ def create_app():
     app.register_blueprint(blueprint_home,url_prefix='/api/v1')
     @app.route('/')
     def home():
-        return {'msj': 'hola mundo jsjsj'}
+        return {'msj': 'hola mundo jsjsjx2'}
 
     return app
 
