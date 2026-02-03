@@ -1,8 +1,20 @@
 from flask import Flask
 from controllers.HomeController import blueprint_home
+from extensions import db,migrate
+from config import Config
+from models.user import User
 
 def create_app():
     app = Flask(__name__)
+    app.config.from_object(Config)
+
+
+    db.init_app(app)
+    migrate.init_app(app,db)
+    
+
+
+
     app.register_blueprint(blueprint_home,url_prefix='/api/v1')
     @app.route('/')
     def home():

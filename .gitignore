@@ -1,1 +1,11 @@
-env/ 
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+
+# Variables de entorno (Seguridad)
+.env
